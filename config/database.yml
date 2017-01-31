@@ -80,6 +80,10 @@ test:
 #
 production:
   <<: *default
-  database: ChWishlist_production
-  username: ChWishlist
+  host: localhost
+  adapter: postgresql
+  encoding: utf8
+  database: chwishlist_production
+  pool: 5
+  username: <%= ENV['CHWISHLIST_DATABASE_USER'] %>
   password: <%= ENV['CHWISHLIST_DATABASE_PASSWORD'] %>
